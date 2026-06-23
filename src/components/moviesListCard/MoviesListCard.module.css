@@ -1,0 +1,89 @@
+.detailsContainer {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+    font-family: sans-serif;
+}
+
+.poster {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    font-size: 48px;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 20px;
+    font-style: italic;
+    color: #777;
+    margin-top: -10px;
+}
+
+.overview {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.stats {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    align-items: center;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.releaseDate {
+    color: #5f7575;
+}
+
+/*//////////////////////////////////////////////////////////*/
+/*Стилізація MoviesListCardPage*/
+
+.backButtonContainer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.backButton {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: darkgrey;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.backButton:hover {
+    transform: scale(1.1);
+    background-color: darkslategrey;
+}

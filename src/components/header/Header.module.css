@@ -1,0 +1,72 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 1px solid lightgrey;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.leftSide {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navigation {
+    display: flex;
+    gap: 25px;
+}
+
+.link, .activeLink {
+    text-decoration: none;
+    font-size: 18px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.link:hover {
+    color: black;
+}
+
+.activeLink {
+    color: black;
+    border-bottom: 2px solid dodgerblue;
+}
+
+.rightSide {
+}
+
+.searchInput {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    width: 250px;
+    outline: none;
+    transition: width 0.3s ease-in-out, box-shadow 0.2s;
+}
+
+.searchInput:focus {
+    width: 300px;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+.searchButton {
+    padding: 10px 18px;
+    margin-left: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: cadetblue;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.searchButton:hover {
+    background-color: dodgerblue;
+}
+
