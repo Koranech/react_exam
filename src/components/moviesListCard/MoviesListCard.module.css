@@ -5,62 +5,6 @@
     font-family: sans-serif;
 }
 
-.poster {
-    width: 300px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
-
-.info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.title {
-    font-size: 48px;
-    margin: 0;
-}
-
-.tagline {
-    font-size: 20px;
-    font-style: italic;
-    color: #777;
-    margin-top: -10px;
-}
-
-.overview {
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 600px;
-}
-
-.genres {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.stats {
-    display: flex;
-    gap: 30px;
-    font-size: 18px;
-    align-items: center;
-}
-
-.rating {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: bold;
-    color: yellow;
-}
-
-.releaseDate {
-    color: #5f7575;
-}
-
 /*//////////////////////////////////////////////////////////*/
 /*Стилізація MoviesListCardPage*/
 

@@ -1,10 +1,10 @@
-import MoviesList from "../components/moviesList/MoviesList.tsx";
+import MoviesPage from "../containers/MoviesPage.tsx";
 
 
 const MoviesListPage = () => {
     return (
         <>
-            <MoviesList/>
+            <MoviesPage/>
         </>
     );
 };

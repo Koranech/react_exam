@@ -1,0 +1,17 @@
+.poster {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.noPoster {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 450px;
+    border-radius: 12px;
+    background-color: lightgrey;
+    color: #555;
+}

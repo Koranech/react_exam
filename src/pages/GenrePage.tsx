@@ -1,9 +1,9 @@
-import Genre from "../components/genre/Genre.tsx";
+import GenresPage from "../containers/GenresPage.tsx";
 
 const GenrePage = () => {
     return (
         <>
-        <Genre/>
+        <GenresPage/>
         </>
     );
 };

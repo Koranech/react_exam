@@ -12,9 +12,10 @@ type MovieTypeProps = {
 const MovieOnList: FC<MovieTypeProps> = ({movie, currentPage}) => {
     return (
         <Link to={`/movies/${movie.id}`} state={{fromPage: currentPage}} className={styles.card}>
-            <img className={styles.poster} src={`${posterBaseUrl}${movie.poster_path}`} alt={movie.title}/>
-            <h3 className={styles.title}>{movie.title}</h3>
-
+            {movie.poster_path
+                ? <img className={styles.poster} src={`${posterBaseUrl}${movie.poster_path}`} alt={movie.title}/>
+                : <h3 className={styles.title}>Movie name: {movie.title}</h3>
+            }
         </Link>
     );
 };

@@ -1,0 +1,33 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    font-size: 48px;
+    margin: 0;
+}
+
+.stats {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    align-items: center;
+}
+
+.releaseDate {
+    color: #5f7575;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.overview {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+}

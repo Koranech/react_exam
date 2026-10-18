@@ -1,27 +1,32 @@
 import MoviesListCard from "../components/moviesListCard/MoviesListCard.tsx";
 import {Link, useLocation, useParams} from "react-router-dom";
-import {useEffect, useState} from "react";
-import type {IMovie} from "../models/IMovie.ts";
-import {movieService} from "../services/api.service.ts";
+import {useEffect} from "react";
 import styles from '../components/moviesListCard/MoviesListCard.module.css'
+import {useAppDispatch, useAppSelector} from "../redux/hooks.ts";
+import {clearMovie, loadMovieById} from "../redux/slices/movieSlice.ts";
 
 const MoviesListCardPage = () => {
 
     const {id} = useParams<{ id: string }>()
-    const [movie, setMovie] = useState<IMovie | null>(null)
+    const dispatch = useAppDispatch()
+    const {movie, isLoading, error} = useAppSelector(state => state.movie)
 
     const location = useLocation()
     const fromPage = location.state?.fromPage || 1
 
     useEffect(() => {
         if (id) {
-            movieService.getById(Number(id))
-                .then(movie => setMovie(movie))
+           dispatch(loadMovieById(Number(id)))
         }
-    }, [id]);
+        return () => {
+            dispatch(clearMovie())
+        }
+    }, [id, dispatch]);
 
     return (
         <>
+            {isLoading && <p>Loading...</p>}
+            {error && <p>Error: {error}</p>}
             {movie && <MoviesListCard movie={movie}/>}
             <div className={styles.backButtonContainer}>
                 <Link to={`/?page=${fromPage}`} className={styles.backButton}>

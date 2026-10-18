@@ -14,7 +14,7 @@ export const movieService = {
         return movie
     },
     searchMovies: async (query: string, page: number): Promise<IResponse> => {
-        const {data} = await axiosInstance.get<IResponse>(`/search/movie?query=${query}&page=${page}`)
+        const {data} = await axiosInstance.get<IResponse>('/search/movie', {params: {query, page}} )
         return data
     },
     getGenres: async (): Promise<IGenre[]> => {
